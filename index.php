@@ -88,30 +88,7 @@ if (isset($_GET['edit_id'])) {
 <title>XINGXING STORE</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<style>
-body {
-    background: linear-gradient(135deg, #f9f1ff, #d9f7ff);
-    font-family: 'Comic Sans MS', cursive;
-}
-.nav-link { cursor: pointer; font-weight: bold; }
-.nav-pills .nav-link.active { background-color: #ff6f61 !important; }
-.card { border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-input, button { border-radius: 8px !important; }
-.btn-primary { background-color: #ff6f61; border: none; }
-.btn-primary:hover { background-color: #e55c4f; }
-.btn-warning { background-color: #ffc107; border: none; border-radius: 8px; }
-.btn-warning:hover { background-color: #e0a800; }
-.logo {
-    height: 50px;
-    margin-right: 10px;
-    border-radius: 10px;
-}
-.title-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-</style>
+<link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <div class="container mt-4">
@@ -170,7 +147,6 @@ input, button { border-radius: 8px !important; }
         </li>
     </ul>
 
-    <!-- ================= VER PRODUCTOS ================= -->
     <div id="view-section" <?= $edit_product ? 'style="display:none;"' : '' ?>>
         <h3>Ver Productos</h3>
         <form method="GET" class="mb-3">
@@ -203,7 +179,6 @@ input, button { border-radius: 8px !important; }
         </table>
     </div>
 
-    <!-- ================= REGISTRAR / EDITAR ================= -->
     <div id="register-section" <?= !$edit_product ? 'style="display:none;"' : '' ?>>
         <h3><?= $edit_product ? "Editar Producto" : "Registrar Producto" ?></h3>
         <form method="POST" class="mb-4">
@@ -247,35 +222,10 @@ input, button { border-radius: 8px !important; }
             <?php endif; ?>
         </form>
     </div>
-
 <?php endif; ?>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-<script>
-// Tabs
-$('#tab-view').click(function(){
-    $(this).addClass('active');
-    $('#tab-register').removeClass('active');
-    $('#view-section').show();
-    $('#register-section').hide();
-});
-$('#tab-register').click(function(){
-    $(this).addClass('active');
-    $('#tab-view').removeClass('active');
-    $('#register-section').show();
-    $('#view-section').hide();
-});
-
-// Login / registro
-$('#btn-login').click(function(){
-    $(this).addClass('active'); $('#btn-register').removeClass('active');
-    $('#login-form').show(); $('#register-form').hide();
-});
-$('#btn-register').click(function(){
-    $(this).addClass('active'); $('#btn-login').removeClass('active');
-    $('#register-form').show(); $('#login-form').hide();
-});
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,43 @@
+body {
+    background: linear-gradient(135deg, #f9f1ff, #d9f7ff);
+    font-family: 'Comic Sans MS', cursive;
+}
+.nav-link { 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+.nav-pills .nav-link.active { 
+    background-color: #ff6f61 !important; 
+}
+.card { 
+    border-radius: 15px; 
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+}
+input, button { 
+    border-radius: 8px !important; 
+}
+.btn-primary { 
+    background-color: #ff6f61; 
+    border: none; 
+}
+.btn-primary:hover { 
+    background-color: #e55c4f; 
+}
+.btn-warning { 
+    background-color: #ffc107; 
+    border: none; 
+    border-radius: 8px; 
+}
+.btn-warning:hover { 
+    background-color: #e0a800; 
+}
+.logo {
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
